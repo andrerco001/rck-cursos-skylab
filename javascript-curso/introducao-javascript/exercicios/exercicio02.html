@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Curso Rocketseat</title>
+    </head>
+    <body>
+        <h1>Curso Rocketseat - Exercicio 02</h1>
+
+        <script>
+            function pares(x, y){
+                var init = x;
+                var fim = y;
+                var numerosPares = [];
+                for(let i = init; i <= fim; i++){
+                    if(i % 2 === 0){
+                        numerosPares.push(i);
+                    }
+                }
+                return numerosPares;
+            }
+
+            var resultadoPares = pares(32, 321);
+            console.log(resultadoPares);
+            
+        </script>
+    </body>
+</html>

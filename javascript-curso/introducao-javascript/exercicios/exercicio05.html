@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Curso Rocketseat</title>
+    </head>
+    <body>
+        <h1>Curso Rocketseat - exercicio 05</h1>
+
+        <script>
+        
+        var usuarios = [
+            {
+                nome: "Diego",
+                habilidades: ["Javascript", "ReactJS", "Redux"]
+                },
+                {
+                    nome: "Gabriel",
+                    habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+                }
+            ];
+
+            function mostrarUsuarios(obj){
+                
+                /*
+                for (i in obj) {
+                    console.log(`O ${obj[i].nome} possui as habilidades: ${obj[i].habilidades.join(', ')}`);
+                }
+                */
+                
+                for (i of obj) {
+                    console.log(`O ${i.nome} possui as habilidades: ${i.habilidades.join(', ')}`);
+                }
+            }
+
+            mostrarUsuarios(usuarios);
+
+        </script>
+    </body>
+</html>

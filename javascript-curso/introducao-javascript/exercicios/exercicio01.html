@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Curso Rocketseat</title>
+    </head>
+    <body>
+        <h1>Curso Rocketseat - Exercicio 01</h1>
+
+        <script>
+            var endereco = {
+                rua:'Rua dos Pinheiros',
+                numero:1293,
+                bairro:'Centro',
+                cidade:'Sao Paulo',
+                uf:'SP'
+            };
+            
+            function informaEndereco(endereco){
+                return `O usuário mora em ${endereco.cidade} / ${endereco.uf}, no bairro ${endereco.bairro}, na rua "${endereco.rua}" com n. ${endereco.numero}.`;
+            }
+
+            var resultado = informaEndereco(endereco);
+
+            console.log(resultado);
+
+        </script>
+    </body>
+</html>
