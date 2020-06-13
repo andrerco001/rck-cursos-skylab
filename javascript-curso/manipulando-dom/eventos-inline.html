@@ -7,9 +7,25 @@
     <body>
         <h1>Curso Rocketseat - Manipulando DOM - eventos inline</h1>
 
+        <div>
+            <button onclick="showAlert()">Click me 01 - onclick</button>
+
+        </div>
+
+        <div>
+            <button onmouseover="showAlert()">Click me 02 - onmouseover</button>
+        </div>
+
+        <div>
+            <input type="text" onkeypress="showAlert()">
+        </div>
+
         <script>
-            
-            
+
+            function showAlert(){
+                alert('Eventos inline - Manipulando DOM');
+            }
+
         </script>
     </body>
 </html>
