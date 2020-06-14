@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>Curso Rocketseat</title>
+</head>
+
+<body>
+    <h1>Curso Rocketseat - Manipulando DOM - Exercicio 04</h1>
+
+    <div id="app">
+        <ul></ul>
+        <input type="text">
+        <button onclick="adicionar()">Adicionar</button>
+    </div>
+
+    <script>
+    
+    let listElement = document.querySelector('#app ul');
+    let inputElement = document.querySelector('#app input');
+    let buttonElement = document.querySelector('#app button');
+
+    let nomes = ["Diego", "Gabriel", "Lucas"];
+
+    // methods
+    function nameList() {
+        listElement.innerHTML = '';
+        for (nome of nomes) {
+            let liElement = document.createElement('li');
+            let textLiNode = document.createTextNode(nome);
+
+            liElement.appendChild(textLiNode);
+            listElement.appendChild(liElement);
+        }
+    }
+    
+    nameList(nomes);
+
+    function adicionar(){
+        let nomeInput = inputElement.value;
+        nomes.push(nomeInput);
+        inputElement.value = '';
+        nameList(nomes);
+    }
+
+    buttonElement.onclick = adicionar;
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>Curso Rocketseat</title>
+</head>
+
+<body>
+    <h1>Curso Rocketseat - Manipulando DOM - Exercicio 03</h1>
+
+    <div id="container">
+
+    </div>
+
+    <script>
+    
+    let nomes = ["Diego", "Gabriel", "Lucas"];
+    
+    function nameList(nomes) {
+
+        let containerElement = document.querySelector('#container');
+        let ulElement = document.createElement('ul');
+        containerElement.appendChild(ulElement);
+        
+        for (nome of nomes) {
+            
+            let liElement = document.createElement('li');
+            let textLiNode = document.createTextNode(nome);
+
+            liElement.appendChild(textLiNode);
+            ulElement.appendChild(liElement);
+        }
+    }
+
+    nameList(nomes);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Curso Rocketseat</title>
+    </head>
+    <body>
+        <h1>Curso Rocketseat - Manipulando DOM - Exercicio 01</h1>
+
+        <div id="container">
+            <button class="btn">Create Square</button> <br> <br>   
+        </div>
+        
+        <script>
+
+            var button = document.querySelector('.btn');
+        
+            button.onclick = function() {
+                
+                var divElement = document.createElement('div');
+                divElement.style.width = '100px';
+                divElement.style.height = '100px';
+                divElement.style.margin = '5px';
+                divElement.style.display = 'inline-block';
+                divElement.style.backgroundColor = '#FF00FF';
+
+                var containerElement = document.querySelector('#container');
+                containerElement.appendChild(divElement); 
+        }
+            
+        </script>
+    </body>
+</html>
