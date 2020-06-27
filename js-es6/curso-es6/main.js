@@ -1,20 +1,30 @@
-// const 
-// mutação != redefinição
-const usuario = {
-    nome:'Andre'
-};
-console.log(usuario);
-usuario.nome = 'Andre Ricardo';
+// Operações com arrays
+const arr =  [1, 3, 4, 5, 8, 9];
 
-console.log(usuario);
+// map
+const newArr = arr.map(function(item, index){
+    return item * index;
+});
 
-function test(x){
-    let y = 2;
+console.log(newArr);
 
-    if(x > 5){
-        let y = 4;
-        console.log(x, y);
-    }
-}
+// reduce
+const sum = arr.reduce(function(total, next){
+    return total + next;
+});
 
-test(10);
+console.log(sum);
+
+// filter
+const filter = arr.filter(function(item){
+    return item % 2 === 0;
+});
+
+console.log(filter);
+
+// find
+const find = arr.find(function(item){
+    return item === 4;
+});
+
+console.log(find);
